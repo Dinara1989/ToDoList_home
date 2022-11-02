@@ -6,7 +6,7 @@ import {AddItemForm} from "./AddItemForm";
 import Counter from "./counter/Counter";
 
 export type FilterValuesType = "all" | "active" | "completed";
-type TodolistType = {
+export type TodolistType = {
     id: string
     title: string
     filter: FilterValuesType
@@ -77,8 +77,8 @@ function App() {
     ])
 
     let removeTodolist = (todolistsID: string) => {
-        let filteredTodolist = todolists.filter(tl => tl.id !== todolistsID)
-        setTodolists(filteredTodolist);
+        // let filteredTodolist = todolists.filter(tl => tl.id !== todolistsID)
+        // setTodolists(filteredTodolist);
         delete tasksObj[todolistsID];
         setTasks({...tasksObj});
     }
